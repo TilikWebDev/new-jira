@@ -7,6 +7,7 @@
   ],
   "plugins": ["import", "prettier", "@typescript-eslint"],
   "rules": {
+    "@typescript-eslint/no-empty-interface": "off",
     "prettier/prettier": "error",
     "prefer-const": "error",
     "import/order": [
@@ -30,9 +31,12 @@
       },
       "eslint-import-resolver-custom-alias": {
         "alias": {
+          "@ui": "./src/components/ui",
           "@components": "./src/components",
-          "@hooks": "./src/hooks",
-          "@assets": "./src/assets"
+          "@containers": "./src/containers",
+          "@context": "./src/context",
+          "@utils": "./src/lib/utils.ts",
+          "@appTypes": "./src/types"
         },
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
