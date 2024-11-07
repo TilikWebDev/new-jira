@@ -1,0 +1,57 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["import", "prettier", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/no-empty-interface": "off",
+    "prettier/prettier": "error",
+    "prefer-const": "error",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "never",
+        "groups": [
+          ["builtin", "external"],
+          "internal",
+          ["parent", "sibling", "index"]
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      },
+      "eslint-import-resolver-custom-alias": {
+        "alias": {
+          "@ui": "./src/components/ui",
+          "@components": "./src/components",
+          "@containers": "./src/containers",
+          "@context": "./src/context",
+          "@utils": "./src/lib/utils.ts",
+          "@appTypes": "./src/types"
+        },
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parserOptions": {
+    "requireConfigFile": false,
+    "ecmaVersion": 2021,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  }
+}
