@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/new-jira/static/css/main.20dbc509.css",
+    "main.js": "/new-jira/static/js/main.e84548c6.js",
+    "index.html": "/new-jira/index.html",
+    "main.20dbc509.css.map": "/new-jira/static/css/main.20dbc509.css.map",
+    "main.e84548c6.js.map": "/new-jira/static/js/main.e84548c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20dbc509.css",
+    "static/js/main.e84548c6.js"
+  ]
+}
